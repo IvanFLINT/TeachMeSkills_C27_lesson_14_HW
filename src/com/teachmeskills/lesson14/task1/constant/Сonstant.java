@@ -6,5 +6,6 @@ public interface Сonstant {
     String PATH = ".\\file\\source\\documentation.txt";
     String DOC = ".\\file\\documents\\document.txt";
     String CON = ".\\file\\documents\\contract.txt";
+    String NOT_VALID = ".\\file\\documents\\notValid.txt";
     String ERROR_LOG = ".\\file\\logs\\error_log.txt";
 }
