@@ -1,1 +1,25 @@
 File does not exist
+Not valid number: docnum8 length does not match
+Not valid number: docnum4646g length does not match
+Not valid number: contract53d length does not match
+Not valid number: contract#36h?d length does not match
+Not valid number: docnu____m8 length does not match
+Write error
+Not valid number: docnum4646g length does not match
+Write error
+Not valid number: contra---ct53d length does not match
+Write error
+Not valid number: contract#_3h?d length does not match
+Write error
+Not valid number: docnu________m8 there is a special symbol
+Not valid number: docnum4646g length does not match
+Not valid number: docnum4646g there is a special symbol
+Not valid number: contra----ct53d there is a special symbol
+Not valid number: contract3536hf length does not match
+Not valid number: contract3536hf there is a special symbol
+Not valid number: docnu________m8 there is a special symbol or space
+Not valid number: docnum4646g length does not match
+Not valid number: docnum4646g there is a special symbol or space
+Not valid number: contra----ct53d there is a special symbol or space
+Not valid number: contract3536hf length does not match
+Not valid number: contract3536hf there is a special symbol or space

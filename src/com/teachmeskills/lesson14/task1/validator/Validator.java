@@ -1,16 +1,18 @@
-package com.teachmeskills.lesson14.task1.service;
+package com.teachmeskills.lesson14.task1.validator;
 
 import com.teachmeskills.lesson14.task1.constant.Сonstant;
 
 import java.io.*;
-
-public class Service {
-    public static void service() {
+/**
+ * the Validator class contains the validator method for checking whether the source numbers of documents and contracts match. Sorts by matching files
+ */
+public class Validator {
+    public static void validator() {
         File dir = new File(Сonstant.PATH);
         BufferedReader br = null;
-        try{
-        br = new BufferedReader(new FileReader(dir));
-        }catch (Exception e){
+        try {
+            br = new BufferedReader(new FileReader(dir));
+        } catch (Exception e) {
             System.out.println("File does not exist");
             try (FileWriter writer = new FileWriter(Сonstant.ERROR_LOG, true)) {
                 writer.write("File does not exist" + "\n");
@@ -54,9 +56,14 @@ public class Service {
                     }
                 }
             }
-            if(!line.matches(Сonstant.CONTRACT) && !line.matches(Сonstant.DOC_NUM)){
-                try (FileWriter writer = new FileWriter(Сonstant.NOT_VALID, true)) {
-                    writer.write("Not valid number: " + line + "\n");
+            if (!line.matches(Сonstant.CONTRACT) && !line.matches(Сonstant.DOC_NUM)) {
+                try (FileWriter writer = new FileWriter(Сonstant.ERROR_LOG, true)) {
+                    if (line.length() < 15 || line.length() > 15) {
+                        writer.write("Not valid number: " + line + " length does not match" + "\n");
+                    }
+                    if (line.matches(Сonstant.NOT_VALID)) {
+                        writer.write("Not valid number: " + line + " there is a special symbol or space" + "\n");
+                    }
                 } catch (Exception ex1) {
                     System.out.println("Write error");
                     try (FileWriter writer = new FileWriter(Сonstant.ERROR_LOG, true)) {
@@ -65,7 +72,6 @@ public class Service {
                         System.out.println("Write error");
                     }
                 }
-
             }
         }
     }
