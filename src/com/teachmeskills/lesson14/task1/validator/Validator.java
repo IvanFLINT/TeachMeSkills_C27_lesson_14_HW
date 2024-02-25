@@ -4,11 +4,11 @@ import com.teachmeskills.lesson14.task1.constant.Сonstant;
 
 import java.io.*;
 /**
- * the Validator class contains the validator method for checking whether the source numbers of documents and contracts match. Sorts by matching files
+ * The Validator class contains the validator method for checking whether the source numbers of documents and contracts match. Sorts by matching files
  */
 public class Validator {
-    public static void validator() {
-        File dir = new File(Сonstant.PATH);
+    public static void validator(String path) {
+        File dir = new File(path);
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(dir));
@@ -57,7 +57,7 @@ public class Validator {
                 }
             }
             if (!line.matches(Сonstant.CONTRACT) && !line.matches(Сonstant.DOC_NUM)) {
-                try (FileWriter writer = new FileWriter(Сonstant.ERROR_LOG, true)) {
+                try (FileWriter writer = new FileWriter(Сonstant.EXECUTION_LOG, true)) {
                     if (line.length() < 15 || line.length() > 15) {
                         writer.write("Not valid number: " + line + " length does not match" + "\n");
                     }
