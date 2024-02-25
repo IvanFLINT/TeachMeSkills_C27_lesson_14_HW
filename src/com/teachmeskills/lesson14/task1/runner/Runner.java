@@ -19,6 +19,8 @@ public class Runner {
             Validator.validator(path);
         } catch (Exception e) {
             System.out.println("File path not found");
+        }finally {
+            sc.close();
         }
     }
 }

@@ -4,3 +4,9 @@ Not valid number: docnum4646g there is a special symbol or space
 Not valid number: contra----ct53d there is a special symbol or space
 Not valid number: contract3536hf length does not match
 Not valid number: contract3536hf there is a special symbol or space
+Not valid number: docnu________m8 there is a special symbol or space
+Not valid number: docnum4646g length does not match
+Not valid number: docnum4646g there is a special symbol or space
+Not valid number: contra----ct53d there is a special symbol or space
+Not valid number: contract3536hf length does not match
+Not valid number: contract3536hf there is a special symbol or space
